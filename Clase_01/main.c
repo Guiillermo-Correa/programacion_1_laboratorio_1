@@ -1,39 +1,63 @@
 #include <stdio.h>
 #include <stdlib.h>
-/**
-*
-*
-*
-*@param
-*@return
-*/
+
 int main()
 {
-    char nombre;
-    float sueldo;
-    int aumento;
-    float sueldoFinal;
-    int porcentaje;
+    char hora;
 
-    printf("ingrese el nombre\n");
-    scanf("%c",&nombre);
+    printf("ingrese una hora:");
 
-    printf("Ingrese el sueldo\n");
-    scanf("%f",&sueldo);
+    scanf("%d",&hora);
 
-    printf("Ingrese el aumento\n");
-    scanf("%d",&aumento);
-
-    porcentaje=(aumento*sueldo)/100;
-
-    sueldoFinal=sueldo+porcentaje;
-
-    printf("Su nombre es %c ", nombre);
-    printf("su sueldo es %.f ", sueldo);
-    printf("El porcentaje de aumento es %d ", aumento);
-    printf(" Su sueldo final es  %.f ", sueldoFinal );
-
+    switch(hora)
+    {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+            printf("levantate");
+            break;
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+            printf("es de noche");
+            break;
+    }
 
 
+    /*int i=0;
+
+    do
+    {
+        i++;
+        printf("%d\n",i);
+
+    }while(i<10);
+
+*/
+
+  /* ///////////// W H I L E ///////////////////////
+    int i=0;
+
+    while(i<10)
+
+    {
+        i++;
+        printf("%d\n",i);
+    }
+*/
+
+/*
+///////////// F O R ///////////////////////
+    int i;
+
+    for(i=0; i<10; i++)
+    {
+        printf("%d\n",(i+1));
+    }
+
+  */
     return 0;
 }
