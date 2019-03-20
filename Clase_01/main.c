@@ -1,9 +1,85 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 int main()
 {
+
+    int nro,max,min;
+    int flag=0;
+    char rta;
+
+    do
+    {
+        printf("Ingrese un numero:");
+        scanf("%d",& nro);
+
+        if(flag==0 || nro>max)
+
+        {
+                min=nro;
+
+                flag=1;
+        }
+
+        do{
+            printf("Continuar? [S/N]");
+
+            fflush(stdin);
+
+            scanf("%c",&rta);
+
+            rta=toupper(rta);
+
+        }while(rta!='S' && rta != 'N');
+
+
+    }   while(rta=='S');
+
+    system("cls");
+
+    printf("El numero maximo es %d\n El numero minimo es %d\n",max,min);
+
+
+/*
     char hora;
+
+    printf("ingrese una hora:");
+
+    fflush(stdin);
+
+    scanf("%c",&hora);
+
+    switch(hora)
+    {
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+            printf("levantate");
+            break;
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+            printf("es de noche");
+            break;
+
+        default :
+            printf("te pasaste");
+    }
+
+
+
+
+
+
+*/
+
+
+  /*
+    int hora;
 
     printf("ingrese una hora:");
 
@@ -24,8 +100,11 @@ int main()
         case 9:
             printf("es de noche");
             break;
-    }
 
+        default :
+            printf("te pasas");
+    }
+*/
 
     /*int i=0;
 
